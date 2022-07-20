@@ -1,0 +1,1024 @@
+{
+  "resources": [
+    {
+      "path": "data\\acoes_planejamento.csv",
+      "name": "acoes_planejamento",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8",
+      "dialect": {
+        "delimiter": ";"
+      },
+      "schema": {
+        "fields": [
+          {
+            "type": "integer",
+            "name": "codigo_do_programa",
+            "title": "Código do Programa",
+            "description": "Código que identifica unicamente um programa governamental. Um número inteiro variando de 1 a 999",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "nome_do_programa",
+            "title": "Nome do Programa",
+            "description": "O programa é o instrumento de organização da ação governamental. É a unidade básica do PPAG, funcionando como elemento integrador do planejamento, do orçamento e da gestão. Representa uma política pública que visa o enfrentamento de um problema ou oportunidade, sendo mensurado por indicadores. A sua construção visa a transformação ou mudança de uma realidade concreta. Programas são constituídos de ações governamentais e atrelados a Unidades Orçamentárias",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "codigo_da_area_tematica",
+            "title": "Código da Área Temática",
+            "description": "Código que identifica a área temática a qual o programa faz parte. Alfanumérico na forma 00AT00",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "area_tematica",
+            "title": "Área Temática",
+            "description": "As Áreas Temáticas são a forma de organização das Diretrizes Estratégicas previstas no Plano Mineiro de Desenvolvimento Integrado - PMDI. As Áreas são compostas pelas Áreas Temáticas Finalísticas e pelas Áreas Temáticas de Apoio e Suporte. As Áreas Temáticas Finalísticas são aquelas que produzem resultados diretos para os cidadãos, são as responsáveis por consolidar as transformações necessárias e desejadas para o alcance da visão de futuro e dos objetivos estratégicos, observando os princípios definidos. Essas Áreas reúnem os melhores esforços e recursos visando as transformações e melhorias desejadas em direção à visão de futuro e às metas de médio e longo prazo. Já as Áreas Temáticas de Apoio e Suporte fornecem toda a sustentação necessária às Áreas Temáticas Finalísticas na consecução de seus objetivos e no alcance das metas e resultados.",
+            "source": "SISOR"
+          },
+          {
+            "type": "boolean",
+            "name": "exclusao_logica_do_programa",
+            "title": "Exclusão Lógica do Programa",
+            "description": "Identifica se o programa foi excluído do planejamento, porém ele continua existindo dentro da base para critérios de histórico e consolidação",
+            "source": "SISOR"
+          },
+          {
+            "type": "boolean",
+            "name": "programa_novo",
+            "title": "Programa Novo",
+            "description": "Identifica se o programa foi criado neste exercício (campo ano desta base)",
+            "source": "SISOR"
+          },
+          {
+            "name": "justificativa_de_inclusao_ou_exclusao_do_programa",
+            "type": "any",
+            "title": "Justificativa de Inclusão ou Exclusão do Programa",
+            "description": "Informa o motivo pelo qual o programa foi incluído ou excluído no PPAG a partir das revisões anuais ou emendas parlamentares.",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "codigo_da_unidade_orcamentaria_responsavel_pelo_programa",
+            "title": "Código da Unidade Orçamentária Responsável pelo Programa",
+            "description": "Identifica qual o código da unidade orçamentária que é resonsável pela gestão do programa.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "unidade_orcamentaria_responsavel_pelo_programa",
+            "title": "Unidade Orçamentária Responsável pelo Programa",
+            "description": "Identifica o sistema operacional a que está vinculada a unidade orçamentária responsável pelo programa. O órgão pode se subdividir em várias unidades orçamentárias, que por sua vez, se subdividem em unidades administrativas, executoras e unidades de programação de gasto.",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "codigo_da_unidade_orcamentaria_responsavel_pela_acao",
+            "title": "Código da Unidade Orçamentária Responsável pela Ação",
+            "description": "Código que identificamente unicamente a unidade orçamentária responsável pela ação. Uma ação somente pode ter uma ....",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "unidade_orcamentaria_responsavel_pela_acao",
+            "title": "Unidade Orçamentária Responsável pela Ação",
+            "description": "Especifica a unidade orçamentária responsável pelo gerenciamento da ação e em que estãoconsignados os recursos orçamentários alocados na ação. Uma ação somente pode ter uma unidade orçamentária responsável.",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "codigo_da_funcao",
+            "title": "Código da Função",
+            "description": "Um programa pode ter várias funções orçamentárias diferentes, identificadas por este código.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "funcao",
+            "title": "Função",
+            "description": "A função representa o maior nível de agregação das diversas áreas de despesa que competemao setor público. Tem como objetivo consolidar em que áreas de atuação do setor públicosão gastos os recursos orçamentários, tendo como critério a natureza do objeto da ação.Portanto, visa a agregar ações que tenham objetos correlatos. Um programa pode ter açõesatreladas a distintas funções, assim como uma unidade orçamentária",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "codigo_da_subfuncao",
+            "title": "Código da Subfunção",
+            "description": "Um ação pode ter várias subfunções orçamentárias diferentes, identificadas por este código.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "subfuncao",
+            "title": "Subfunção",
+            "description": "a subfunção representa uma partição da função, visando agregar determinado subconjunto de despesas do setor público. Identifica a natureza básica das ações que se aglutinam em torno das funções. As subfunções poderão ser combinadas com funções diferentes daquelas a que estão relacionadas no rol fixado pela Portaria. Tal como ocorre com a função, o critério que preside a definição da subfunção é a natureza do objeto da ação. Dessa forma, a partir do rol fixo apresentado pela Portaria Ministerial, se escolhe aquela que se encontra mais próximadaquilo que é feito no âmbito da ação.",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "codigo_do_tipo_de_acao",
+            "title": "Código do Tipo de Ação",
+            "description": "Cada ação tem um tipo atrelado, que é identificado por este código unicamente.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "tipo_de_acao",
+            "title": "Tipo de Ação",
+            "description": "Indica o nome correspondente ao código da ação. As ações classificam-se nos seguintes tipos: 1 - Projeto do Orçamento Fiscal2 - Atividade Meio do Orçamento Fiscal3 - Projeto do Orçamento de Investimento4 - Atividade Fim do Orçamento Fiscal5 - Não Orçamentário6 - Atividade Meio de Empresa7 - Operação Especial8 - Atividade Fim de Empresa9 - Reserva de Contingência",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "codigo_da_acao",
+            "title": "Código da Ação",
+            "description": "Cada ação é identificada por um código variando de 1 a 9999",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "titulo_da_acao",
+            "title": "Título da Ação",
+            "description": "O título fornece ideia clara acerca do que é feito no âmbito da ação. É a forma pela qual a ação será identificada pela sociedade e pela administração pública e apresentada no PPAG e na LOA. Ação é o instrumento de programação para alcançar o objetivo do programa, considerado a unidade básica de gestão e definição de metas no PPAG. Ela envolve o conjunto de operações das quais resulta a entrega de um produto (bem, serviço ou transferência financeira) necessário ao enfrentamento da causa do problema ou da oportunidadeAções possuem códigos, tipo, finalidade, descrição, público-alvo, produto e uma unidade de medida desse produto",
+            "source": "SISOR"
+          },
+          {
+            "name": "codigo_do_identificador_de_acao_governamental_(iag)",
+            "type": "any",
+            "title": "Código do Identificador de Ação Governamental (IAG)",
+            "description": "Cada IAG é identificada por um código único que pode ser 0 ou 1",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "identificador_de_acao_governamental_(iag)",
+            "title": "Identificador de Ação Governamental (IAG)",
+            "description": "Identifica os programas de acordo com o seu posicionamento no mapa estratégico definido no PMDI. Desse modo, por meio desse código as ações se classificam em projetos estratégicos (1) ou demais projetos e atividades (0)",
+            "source": "SISOR"
+          },
+          {
+            "name": "codigo_do_projeto_estrategico",
+            "type": "any",
+            "title": "Código do Projeto Estratégico",
+            "description": "Cada projeto estratégico é identificado unicamente por um código variando de 1 a 99",
+            "source": "SISOR"
+          },
+          {
+            "name": "projeto_estrategico",
+            "type": "any",
+            "title": "Projeto Estratégico",
+            "description": "projetos estratégicos e que, portanto, representam as ações prioritárias de governos. Ou seja, estão diretamente relacionadas aos objetivos estratégicos, áreas e diretrizes estratégicas estabelecidas no PMDI 2019-2030.",
+            "source": "SISOR"
+          },
+          {
+            "type": "boolean",
+            "name": "exclusao_logica_da_acao",
+            "title": "Exclusão Lógica da Ação",
+            "description": "Identifica se a ação foi excluída do planejamento, porém ela continua existindo dentro da base para critérios de histórico e consolidação",
+            "source": "SISOR"
+          },
+          {
+            "type": "boolean",
+            "name": "nova_acao",
+            "title": "Nova Ação",
+            "description": "Indica se a ação é uma nova ação adcionada durante a revisão feita neste exercício.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "justificativa_de_inclusao_ou_exclusao_da_acao",
+            "title": "Justificativa de Inclusão ou Exclusão da Ação",
+            "description": "Informa o motivo pelo qual a ação foi incluída ou excluída no PPAG a partir das revisões anuais ou emendas parlamentares.",
+            "source": "SISOR"
+          },
+          {
+            "type": "boolean",
+            "name": "transferida_para_o_sisor",
+            "title": "Transferida para o SISOR",
+            "description": "?",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "unidade_administrativa_responsavel_pela_acao",
+            "title": "Unidade Administrativa Responsável pela Ação",
+            "description": "É a unidade responsável pela gestão global da ação, empreendendo as etapas de formulação, execução, monitoramento e avaliação da ação sob a coordenação técnica da unidade setorial de planejamento e orçamento. A unidade administrativa responsável corresponde ao menor nível hierárquico com ampla responsabilidade de decisão e alocação de recursos no âmbito da ação. Desse modo, representa o vínculo da estrutura programática inscrita no plano plurianual com a estrutura institucional. Em regra, o gestor da ação é o titular da unidade administrativa responsável.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "base_legal",
+            "title": "Base legal",
+            "description": "Instrumentos normativos que dão respaldo à ação. Podem ser gerais, eis que dedutíveis tão somente da competência da unidade executora; ou específicos, quando a ação detém uma regulamentação própria.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "finalidade_da_acao",
+            "title": "Finalidade da Ação",
+            "description": "Expressa o objetivo a ser alcançado pela ação, ou seja, a motivação para o desenvolvimento da ação. A finalidade faz referência à situação ou à necessidade que o produto resultante da ação visa atender",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "descricao_da_acao",
+            "title": "Descrição da Ação",
+            "description": "Expressa, de forma sucinta, o que é efetivamente feito no âmbito da ação, seu escopo edelimitações. Esse campo é importante no sentido de tornar transparente o que a unidade fazpara executar a ação e alcançar sua finalidade.",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "codigo_do_publico-alvo",
+            "title": "Código do Público-alvo",
+            "description": "Instrumentos normativos que dão respaldo à ação. Podem ser gerais, eis que dedutíveis tãosomente da competência da unidade executora; ou específicos, quando a ação detém umaregulamentação própria.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "publico-alvo",
+            "title": "Público-Alvo",
+            "description": "Especifica os setores da sociedade ou da própria administração pública aos quais a ação sedestina e que se beneficiam direta e legitimamente com os produtos resultantes dela.",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "codigo_do_produto",
+            "title": "Código do Produto",
+            "description": "Código que identifica o produto da ação. Para cada ação deve haver um só produto.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "produto",
+            "title": "Produto",
+            "description": "Bem, serviço ou transferência financeira que resulta da ação, destinado ao público-alvo que é, via de regra, fisicamente mensurável.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "especificacao_do_produto",
+            "title": "Especificação do Produto",
+            "description": "Expressa as características técnicas do produto final visando à sua melhor identificação ou detalhamento do mesmo. Quando o produto se apresenta como uma categoria de bens, serviços ou transferências financeiras resultantes da ação, a especificação do produto detalha as sub modalidades de produto utilizadas como base para a mensuração física",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "codigo_da_unidade_de_medida_do_produto",
+            "title": "Código da Unidade de Medida do Produto",
+            "description": "Código que identifica a unidade de medida do produto",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "unidade_de_medida_do_produto",
+            "title": "Unidade de Medida do Produto",
+            "description": "Padrão selecionado para mensurar a produção do bem, serviço ou transferência financeira.Representa a dimensão fisicamente mensurável do produto, sendo, portanto, o elemento quedá significado ao valor numérico estampado como meta física",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "previsao_orcamentaria_2022",
+            "title": "Previsão Orçamentária 2022",
+            "description": "São as despesas orçamentárias necessárias para a execução da ação no período referido. Representam as estimativas de custos para a realização do montante de produto definido como meta física para cada ano do plano. São a partir dos dados orçamentários da ação no plano plurianual que são detalhados os custos da ação na lei orçamentária anual em termos de categoria econômica, grupo de despesa, modalidade de aplicação, elemento de despesa, identificador de ação governamental, fonte de recursos e procedência. As estimativas devem contemplar recursos para cada ano de vigência do PPAG ou suas revisões",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "previsao_orcamentaria_2023",
+            "title": "Previsão Orçamentária 2023",
+            "description": "São as despesas orçamentárias necessárias para a execução da ação no período referido. Representam as estimativas de custos para a realização do montante de produto definido como meta física para cada ano do plano. São a partir dos dados orçamentários da ação no plano plurianual que são detalhados os custos da ação na lei orçamentária anual em termos de categoria econômica, grupo de despesa, modalidade de aplicação, elemento de despesa, identificador de ação governamental, fonte de recursos e procedência. As estimativas devem contemplar recursos para cada ano de vigência do PPAG ou suas revisões",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "previsao_orcamentaria_2024",
+            "title": "Previsão Orçamentária 2024",
+            "description": "São as despesas orçamentárias necessárias para a execução da ação no período referido. Representam as estimativas de custos para a realização do montante de produto definido como meta física para cada ano do plano. São a partir dos dados orçamentários da ação no plano plurianual que são detalhados os custos da ação na lei orçamentária anual em termos de categoria econômica, grupo de despesa, modalidade de aplicação, elemento de despesa, identificador de ação governamental, fonte de recursos e procedência. As estimativas devem contemplar recursos para cada ano de vigência do PPAG ou suas revisões",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "previsao_orcamentaria_2025",
+            "title": "Previsão Orçamentária 2025",
+            "description": "São as despesas orçamentárias necessárias para a execução da ação no período referido. Representam as estimativas de custos para a realização do montante de produto definido como meta física para cada ano do plano. São a partir dos dados orçamentários da ação no plano plurianual que são detalhados os custos da ação na lei orçamentária anual em termos de categoria econômica, grupo de despesa, modalidade de aplicação, elemento de despesa, identificador de ação governamental, fonte de recursos e procedência. As estimativas devem contemplar recursos para cada ano de vigência do PPAG ou suas revisões",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "previsao_fisica_2022",
+            "title": "Previsão Física 2022",
+            "description": "Quantidade de produto a ser ofertado pela ação no exercício referido pelo PPAG ou suas revisões. Dessa forma, os valores lançados devem ser coerentes com o produto e com a unidade de medida estabelecida para a ação",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "previsao_fisica_2023",
+            "title": "Previsão Física 2023",
+            "description": "Quantidade de produto a ser ofertado pela ação no exercício referido pelo PPAG ou suas revisões. Dessa forma, os valores lançados devem ser coerentes com o produto e com a unidade de medida estabelecida para a ação",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "previsao_fisica_2024",
+            "title": "Previsão Física 2024",
+            "description": "Quantidade de produto a ser ofertado pela ação no exercício referido pelo PPAG ou suas revisões. Dessa forma, os valores lançados devem ser coerentes com o produto e com a unidade de medida estabelecida para a ação",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "previsao_fisica_2025",
+            "title": "Previsão Física 2025",
+            "description": "Quantidade de produto a ser ofertado pela ação no exercício referido pelo PPAG ou suas revisões. Dessa forma, os valores lançados devem ser coerentes com o produto e com a unidade de medida estabelecida para a ação",
+            "source": "SISOR"
+          },
+          {
+            "type": "boolean",
+            "name": "acao_transposta",
+            "title": "Ação Transposta",
+            "description": "?",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "setor_de_governo",
+            "title": "Setor de Governo",
+            "description": "indica qual setor governamental o programa pertence. Pode assumir os seguintes valores:Agricultura, Pecuária E AbastecimentoDesenvolvimento EconômicoEscola De Saúde PúblicaFazendaOuvidoria GeralPlanejamento E GestãoPolícia Civil Do Estado De Minas GeraisPolícia Militar Do Estado De Minas Gerais",
+            "source": "SISOR"
+          }
+        ]
+      }
+    },
+    {
+      "path": "data\\indicadores_planejamento.csv",
+      "name": "indicadores_planejamento",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8",
+      "dialect": {
+        "delimiter": ";"
+      },
+      "schema": {
+        "fields": [
+          {
+            "type": "integer",
+            "name": "codigo_do_programa",
+            "title": "Código do Programa",
+            "description": "Código que identifica unicamente um programa governamental. Um número inteiro variando de 1 a 999",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "nome_do_programa",
+            "title": "Nome do Programa",
+            "description": "O programa é o instrumento de organização da ação governamental. É a unidade básica do PPAG, funcionando como elemento integrador do planejamento, do orçamento e da gestão. Representa uma política pública que visa o enfrentamento de um problema ou oportunidade, sendo mensurado por indicadores. A sua construção visa a transformação ou mudança de uma realidade concreta. Programas são constituídos de ações governamentais e atrelados a Unidades Orçamentárias",
+            "source": "SISOR"
+          },
+          {
+            "type": "boolean",
+            "name": "exclusao_logica_do_programa",
+            "title": "Exclusão Lógica do Programa",
+            "description": "Identifica se o programa foi excluído do planejamento, porém ele continua existindo dentro da base para critérios de histórico e consolidação",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "indicador",
+            "title": "Indicador",
+            "description": "É o elemento capaz de medir o desempenho do programa no alcance de seu objetivo. permite a mensuração dos resultados alcançados, demonstrando se o objetivo do programa está sendo ou não alcançado e em que medida. Os indicadores apresentam-se normalmente sob a forma de quocientes/ razões.",
+            "source": "SISOR"
+          },
+          {
+            "name": "exclusao_logica_do_indicador",
+            "type": "any",
+            "title": "Exclusão Lógica do Indicador",
+            "description": "Identifica se o indicador foi excluído do planejamento, porém ele continua existindo dentro da base para critérios de histórico e consolidação",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "unidade_de_medida",
+            "title": "Unidade de Medida do Produto",
+            "description": "Padrão selecionado para mensurar a produção do bem, serviço ou transferência financeira.Representa a dimensão fisicamente mensurável do produto, sendo, portanto, o elemento quedá significado ao valor numérico estampado como meta física",
+            "source": "SISOR"
+          },
+          {
+            "type": "number",
+            "name": "indice_de_referencia",
+            "title": "Índice de Referência",
+            "description": "Consiste na aferição do indicador em um dado momento. O índice de referência será utilizado de base para a projeção do indicador ao longo do PPAG. Nesse sentido, pode-se afirmar que ele expressa a situação mais recente do problema. ",
+            "source": "SISOR"
+          },
+          {
+            "name": "em_apuracao?_(indice_de_referencia)",
+            "type": "any",
+            "title": "Em apuração? (Índice de Referência)",
+            "description": "?",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "data_de_apuracao",
+            "title": "Data de Apuração",
+            "description": "?",
+            "source": "SISOR"
+          },
+          {
+            "type": "number",
+            "name": "previsao_para_2022",
+            "title": "Previsão para 2022",
+            "description": "?",
+            "source": "SISOR"
+          },
+          {
+            "name": "em_apuracao?_(2022)",
+            "type": "any",
+            "title": "Em apuração? (2022)",
+            "description": "?",
+            "source": "SISOR"
+          },
+          {
+            "type": "number",
+            "name": "previsao_para_2023",
+            "title": "Previsão para 2023",
+            "description": "?",
+            "source": "SISOR"
+          },
+          {
+            "name": "em_apuracao?_(2023)",
+            "type": "any",
+            "title": "Em apuração? (2023)",
+            "description": "?",
+            "source": "SISOR"
+          },
+          {
+            "type": "number",
+            "name": "previsao_para_2024",
+            "title": "Previsão para 2024",
+            "description": "?",
+            "source": "SISOR"
+          },
+          {
+            "name": "em_apuracao?_(2024)",
+            "type": "any",
+            "title": "Em apuração? (2024)",
+            "description": "?",
+            "source": "SISOR"
+          },
+          {
+            "type": "number",
+            "name": "previsao_para_2025",
+            "title": "Previsão para 2025",
+            "description": "?",
+            "source": "SISOR"
+          },
+          {
+            "name": "em_apuracao?_(2025)",
+            "type": "any",
+            "title": "Em apuração? (2025)",
+            "description": "?",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "fonte",
+            "title": "Fonte",
+            "description": "Órgão ou entidade responsável pelo registro ou produção das informações necessárias para a apuração do indicador e divulgação periódica dos índices. As informações utilizadas na construção dos indicadores poderão ser produzidas pelas próprias unidades orçamentárias responsáveis pelos programas ou ações.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "periodicidade",
+            "title": "Periodicidade",
+            "description": "Frequência com a qual o indicador será monitorado. bianual (apurado a cada dois anos); anual (apurado uma vez por ano); semestral (apurado a cada semestre); quadrimestral (apurado a cada quatro meses); trimestral (apurado a cada três meses); bimestral (apurado a cada dois meses) e mensal (apurado a cada mês).",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "base_geografica",
+            "title": "Base Geográfica",
+            "description": "Menor nível de agregação geográfica de apuração do índice, podendo ser municipal, estadual, regional ou nacional.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "formula_de_calculo",
+            "title": "Fórmula de Cálculo",
+            "description": "Demonstra, de forma sucinta e por meio de expressões matemáticas, a fórmula que permite calcular o valor do indicador. Detalha como é possível chegar ao índice expresso pelo indicador.",
+            "source": "SISOR"
+          },
+          {
+            "name": "justificativa_do_status_em_apuracao_da(s)_previsao(es)_do(s)_indice(s)",
+            "type": "any",
+            "title": "Justificativa do Status em apuração da(s) Previsão(es) do(s) Índice(s)",
+            "description": "?Informa o motivo pelo qual o status dos campos PREVISÃO ANO encontram-se em apuração.",
+            "source": "SISOR"
+          },
+          {
+            "name": "justificativa_do_status_em_apuracao_do_indice_de_referencia",
+            "type": "any",
+            "title": "Justificativa do Status em apuração do Índice de Referência",
+            "description": "?Informa o motivo pelo qual o status do campo ÍNDICE DE REFERÊNCIA encontra-se EM APURAÇÃO.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "data_alteracao",
+            "title": "Data Alteração",
+            "description": "?",
+            "source": "SISOR"
+          },
+          {
+            "name": "indicador_novo?",
+            "type": "any",
+            "title": "Indicador Novo?",
+            "description": "Denota se um indicador foi incluído ou excluído no PPAG a partir das revisões anuais ou emendas parlamentares.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "polaridade",
+            "title": "Polaridade",
+            "description": "Indica o sentido favorável de comportamento do indicador, cabendo duas possibilidades: MAIOR ou MENOR. Por exemplo, a taxa de homicídios tem uma polaridade menor melhor e a taxa de alfabetização tem uma polaridade maior melhor.",
+            "source": "SISOR"
+          }
+        ]
+      }
+    },
+    {
+      "path": "data\\localizadores_todos_planejamento.csv",
+      "name": "localizadores_todos_planejamento",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8",
+      "dialect": {
+        "delimiter": ";"
+      },
+      "schema": {
+        "fields": [
+          {
+            "type": "integer",
+            "name": "codigo_do_programa",
+            "title": "Código do Programa",
+            "description": "Código que identifica unicamente um programa governamental. Um número inteiro variando de 1 a 999",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "nome_do_programa",
+            "title": "Nome do Programa",
+            "description": "O programa é o instrumento de organização da ação governamental. É a unidade básica do PPAG, funcionando como elemento integrador do planejamento, do orçamento e da gestão. Representa uma política pública que visa o enfrentamento de um problema ou oportunidade, sendo mensurado por indicadores. A sua construção visa a transformação ou mudança de uma realidade concreta. Programas são constituídos de ações governamentais e atrelados a Unidades Orçamentárias",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "codigo_da_area_tematica",
+            "title": "Código da Área Temática",
+            "description": "Código que identifica a área temática a qual o programa faz parte. Alfanumérico na forma 00AT00",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "area_tematica",
+            "title": "Área Temática",
+            "description": "As Áreas Temáticas são a forma de organização das Diretrizes Estratégicas previstas no Plano Mineiro de Desenvolvimento Integrado - PMDI. As Áreas são compostas pelas Áreas Temáticas Finalísticas e pelas Áreas Temáticas de Apoio e Suporte. As Áreas Temáticas Finalísticas são aquelas que produzem resultados diretos para os cidadãos, são as responsáveis por consolidar as transformações necessárias e desejadas para o alcance da visão de futuro e dos objetivos estratégicos, observando os princípios definidos. Essas Áreas reúnem os melhores esforços e recursos visando as transformações e melhorias desejadas em direção à visão de futuro e às metas de médio e longo prazo. Já as Áreas Temáticas de Apoio e Suporte fornecem toda a sustentação necessária às Áreas Temáticas Finalísticas na consecução de seus objetivos e no alcance das metas e resultados.",
+            "source": "SISOR"
+          },
+          {
+            "type": "boolean",
+            "name": "exclusao_logica_do_programa",
+            "title": "Exclusão Lógica do Programa",
+            "description": "Identifica se o programa foi excluído do planejamento, porém ele continua existindo dentro da base para critérios de histórico e consolidação",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "codigo_da_acao",
+            "title": "Código da Ação",
+            "description": "Cada ação é identificada por um código variando de 1 a 9999",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "titulo_da_acao",
+            "title": "Título da Ação",
+            "description": "O título fornece ideia clara acerca do que é feito no âmbito da ação. É a forma pela qual a ação será identificada pela sociedade e pela administração pública e apresentada no PPAG e na LOA. Ação é o instrumento de programação para alcançar o objetivo do programa, considerado a unidade básica de gestão e definição de metas no PPAG. Ela envolve o conjunto de operações das quais resulta a entrega de um produto (bem, serviço ou transferência financeira) necessário ao enfrentamento da causa do problema ou da oportunidadeAções possuem códigos, tipo, finalidade, descrição, público-alvo, produto e uma unidade de medida desse produto",
+            "source": "SISOR"
+          },
+          {
+            "name": "codigo_do_identificador_de_acao_governamental_(iag)",
+            "type": "any",
+            "title": "Código do Identificador de Ação Governamental (IAG)",
+            "description": "Cada IAG é identificada por um código único que pode ser 0 ou 1",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "identificador_de_acao_governamental_(iag)",
+            "title": "Identificador de Ação Governamental (IAG)",
+            "description": "Identifica os programas de acordo com o seu posicionamento no mapa estratégico definido no PMDI. Desse modo, por meio desse código as ações se classificam em projetos estratégicos (1) ou demais projetos e atividades (0)",
+            "source": "SISOR"
+          },
+          {
+            "name": "codigo_do_projeto_estrategico",
+            "type": "any",
+            "title": "Código do Projeto Estratégico",
+            "description": "Cada projeto estratégico é identificado unicamente por um código variando de 1 a 99",
+            "source": "SISOR"
+          },
+          {
+            "name": "projeto_estrategico",
+            "type": "any",
+            "title": "Projeto Estratégico",
+            "description": "projetos estratégicos e que, portanto, representam as ações prioritárias de governos. Ou seja, estão diretamente relacionadas aos objetivos estratégicos, áreas e diretrizes estratégicas estabelecidas no PMDI 2019-2030.",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "codigo_da_funcao",
+            "title": "Código da Função",
+            "description": "Um programa pode ter várias funções orçamentárias diferentes, identificadas por este código.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "funcao",
+            "title": "Função",
+            "description": "A função representa o maior nível de agregação das diversas áreas de despesa que competemao setor público. Tem como objetivo consolidar em que áreas de atuação do setor públicosão gastos os recursos orçamentários, tendo como critério a natureza do objeto da ação.Portanto, visa a agregar ações que tenham objetos correlatos. Um programa pode ter açõesatreladas a distintas funções, assim como uma unidade orçamentária",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "codigo_da_subfuncao",
+            "title": "Código da Subfunção",
+            "description": "Um ação pode ter várias subfunções orçamentárias diferentes, identificadas por este código.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "subfuncao",
+            "title": "Subfunção",
+            "description": "a subfunção representa uma partição da função, visando agregar determinado subconjunto de despesas do setor público. Identifica a natureza básica das ações que se aglutinam em torno das funções. As subfunções poderão ser combinadas com funções diferentes daquelas a que estão relacionadas no rol fixado pela Portaria. Tal como ocorre com a função, o critério que preside a definição da subfunção é a natureza do objeto da ação. Dessa forma, a partir do rol fixo apresentado pela Portaria Ministerial, se escolhe aquela que se encontra mais próximadaquilo que é feito no âmbito da ação.",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "codigo_da_unidade_orcamentaria_responsavel_pela_acao",
+            "title": "Código da Unidade Orçamentária Responsável pela Ação",
+            "description": "Código que identificamente unicamente a unidade orçamentária responsável pela ação. Uma ação somente pode ter uma ....",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "unidade_orcamentaria_responsavel_pela_acao",
+            "title": "Unidade Orçamentária Responsável pela Ação",
+            "description": "Especifica a unidade orçamentária responsável pelo gerenciamento da ação e em que estãoconsignados os recursos orçamentários alocados na ação. Uma ação somente pode ter uma unidade orçamentária responsável.",
+            "source": "SISOR"
+          },
+          {
+            "name": "exclusao_logica_da_acao",
+            "type": "any",
+            "title": "Exclusão Lógica da Ação",
+            "description": "Identifica se a ação foi excluída do planejamento, porém ela continua existindo dentro da base para critérios de histórico e consolidação",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "codigo_do_localizador",
+            "title": "Código do Localizador",
+            "description": "?Código que identifica cada localizador unicamente. Os localizadores correspondem aos 853 munícipios do estado de Minas Gerais, às 13 Regiões Intermediárias de Desenvolvimento e ainda ao localizador DIVERSOS MUNICÍPIOS  ESTADUAL. As metas físicas e orçamentárias das ações deverão ser distribuídas entres eles. Destaca-se que o valor global da ação, tanto físico quanto orçamentário, será extraído da soma do detalhamento realizado em cada um desses localizadores.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "exclusao_logica_do_localizador",
+            "title": "Exclusão Lógica do Localizador",
+            "description": "?Identifica se o localizador foi excluído do planejamento, porém ele continua existindo dentro da base para critérios de histórico e consolidação",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "codigo_da_regiao_geografica_intermediaria",
+            "title": "Código da Região Geográfica Intermediária",
+            "description": "?Código que identifica uma região intermediária. Seu valor é relacionado ao valor do munícipio do localizador, já que ele deve pertencer àquela mesma região do localizador.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "regiao_geografica_intermediaria",
+            "title": "Região Geográfica Intermediária",
+            "description": "?Nome da região intermediária atrelada a um localizador. As regiões intermediárias, por sua vez, são agrupamentos de regiões imediatas que são articuladas através da influência de uma metrópole, capital regional ou centro urbano representativo dentro do conjunto.",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "codigo_do_municipio_ibge",
+            "title": "Código do Município IBGE",
+            "description": "?Código do IBGE para o município ao qual aquele localizador corresponde",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "codigo_do_municipio_sigplan",
+            "title": "Código do Município Sigplan",
+            "description": "?Código do SIGPLAN, sistema utilizado pelo governo de MG, para o município ao qual aquele localizador corresponde",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "municipio",
+            "title": "Município",
+            "description": "?Nome por extenso do município ao qual o localizador corresponde",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "previsao_orcamentaria_2022",
+            "title": "Previsão Orçamentária 2022",
+            "description": "São as despesas orçamentárias necessárias para a execução da ação no período referido. Representam as estimativas de custos para a realização do montante de produto definido como meta física para cada ano do plano. São a partir dos dados orçamentários da ação no plano plurianual que são detalhados os custos da ação na lei orçamentária anual em termos de categoria econômica, grupo de despesa, modalidade de aplicação, elemento de despesa, identificador de ação governamental, fonte de recursos e procedência. As estimativas devem contemplar recursos para cada ano de vigência do PPAG ou suas revisões",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "previsao_fisica_2022",
+            "title": "Previsão Física 2022",
+            "description": "Quantidade de produto a ser ofertado pela ação no exercício referido pelo PPAG ou suas revisões. Dessa forma, os valores lançados devem ser coerentes com o produto e com a unidade de medida estabelecida para a ação",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "previsao_orcamentaria_2023",
+            "title": "Previsão Orçamentária 2023",
+            "description": "São as despesas orçamentárias necessárias para a execução da ação no período referido. Representam as estimativas de custos para a realização do montante de produto definido como meta física para cada ano do plano. São a partir dos dados orçamentários da ação no plano plurianual que são detalhados os custos da ação na lei orçamentária anual em termos de categoria econômica, grupo de despesa, modalidade de aplicação, elemento de despesa, identificador de ação governamental, fonte de recursos e procedência. As estimativas devem contemplar recursos para cada ano de vigência do PPAG ou suas revisões",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "previsao_fisica_2023",
+            "title": "Previsão Física 2023",
+            "description": "Quantidade de produto a ser ofertado pela ação no exercício referido pelo PPAG ou suas revisões. Dessa forma, os valores lançados devem ser coerentes com o produto e com a unidade de medida estabelecida para a ação",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "previsao_orcamentaria_2024",
+            "title": "Previsão Orçamentária 2024",
+            "description": "São as despesas orçamentárias necessárias para a execução da ação no período referido. Representam as estimativas de custos para a realização do montante de produto definido como meta física para cada ano do plano. São a partir dos dados orçamentários da ação no plano plurianual que são detalhados os custos da ação na lei orçamentária anual em termos de categoria econômica, grupo de despesa, modalidade de aplicação, elemento de despesa, identificador de ação governamental, fonte de recursos e procedência. As estimativas devem contemplar recursos para cada ano de vigência do PPAG ou suas revisões",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "previsao_fisica_2024",
+            "title": "Previsão Física 2024",
+            "description": "Quantidade de produto a ser ofertado pela ação no exercício referido pelo PPAG ou suas revisões. Dessa forma, os valores lançados devem ser coerentes com o produto e com a unidade de medida estabelecida para a ação",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "previsao_orcamentaria_2025",
+            "title": "Previsão Orçamentária 2025",
+            "description": "São as despesas orçamentárias necessárias para a execução da ação no período referido. Representam as estimativas de custos para a realização do montante de produto definido como meta física para cada ano do plano. São a partir dos dados orçamentários da ação no plano plurianual que são detalhados os custos da ação na lei orçamentária anual em termos de categoria econômica, grupo de despesa, modalidade de aplicação, elemento de despesa, identificador de ação governamental, fonte de recursos e procedência. As estimativas devem contemplar recursos para cada ano de vigência do PPAG ou suas revisões",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "previsao_fisica_2025",
+            "title": "Previsão Física 2025",
+            "description": "Quantidade de produto a ser ofertado pela ação no exercício referido pelo PPAG ou suas revisões. Dessa forma, os valores lançados devem ser coerentes com o produto e com a unidade de medida estabelecida para a ação",
+            "source": "SISOR"
+          }
+        ]
+      }
+    },
+    {
+      "path": "data\\programas_planejamento.csv",
+      "name": "programas_planejamento",
+      "profile": "tabular-data-resource",
+      "scheme": "file",
+      "format": "csv",
+      "hashing": "md5",
+      "encoding": "utf-8",
+      "dialect": {
+        "delimiter": ";"
+      },
+      "schema": {
+        "fields": [
+          {
+            "type": "integer",
+            "name": "codigo_do_programa",
+            "title": "Código do Programa",
+            "description": "Código que identifica unicamente um programa governamental. Um número inteiro variando de 1 a 999",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "nome_do_programa",
+            "title": "Nome do Programa",
+            "description": "O programa é o instrumento de organização da ação governamental. É a unidade básica do PPAG, funcionando como elemento integrador do planejamento, do orçamento e da gestão. Representa uma política pública que visa o enfrentamento de um problema ou oportunidade, sendo mensurado por indicadores. A sua construção visa a transformação ou mudança de uma realidade concreta. Programas são constituídos de ações governamentais e atrelados a Unidades Orçamentárias",
+            "source": "SISOR"
+          },
+          {
+            "type": "boolean",
+            "name": "exclusao_logica_do_programa",
+            "title": "Exclusão Lógica do Programa",
+            "description": "Identifica se o programa foi excluído do planejamento, porém ele continua existindo dentro da base para critérios de histórico e consolidação",
+            "source": "SISOR"
+          },
+          {
+            "type": "boolean",
+            "name": "programa_novo",
+            "title": "Programa Novo",
+            "description": "Identifica se o programa foi criado neste exercício (campo ano desta base)",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "codigo_da_area_tematica",
+            "title": "Código da Área Temática",
+            "description": "Código que identifica a área temática a qual o programa faz parte. Alfanumérico na forma 00AT00",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "area_tematica",
+            "title": "Área Temática",
+            "description": "As Áreas Temáticas são a forma de organização das Diretrizes Estratégicas previstas no Plano Mineiro de Desenvolvimento Integrado - PMDI. As Áreas são compostas pelas Áreas Temáticas Finalísticas e pelas Áreas Temáticas de Apoio e Suporte. As Áreas Temáticas Finalísticas são aquelas que produzem resultados diretos para os cidadãos, são as responsáveis por consolidar as transformações necessárias e desejadas para o alcance da visão de futuro e dos objetivos estratégicos, observando os princípios definidos. Essas Áreas reúnem os melhores esforços e recursos visando as transformações e melhorias desejadas em direção à visão de futuro e às metas de médio e longo prazo. Já as Áreas Temáticas de Apoio e Suporte fornecem toda a sustentação necessária às Áreas Temáticas Finalísticas na consecução de seus objetivos e no alcance das metas e resultados.",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "codigo_do_objetivo_estrategico",
+            "title": "Código do Objetivo Estratégico",
+            "description": "Indica o código utilizado pelo governo de Minas Gerais para cada objetivos estratégico",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "objetivo_estrategico",
+            "title": "Objetivo Estratégico",
+            "description": "?",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "codigo_da_diretriz_estrategica",
+            "title": "Código da Diretriz Estratégica",
+            "description": "Indica o código utilizado pelo governo de Minas Gerais para cada diretriz estratégica",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "diretriz_estrategica",
+            "title": "Diretriz Estratégica",
+            "description": "?",
+            "source": "SISOR"
+          },
+          {
+            "name": "justificativa_de_inclusao_ou_exclusao_do_programa",
+            "type": "any",
+            "title": "Justificativa de Inclusão ou Exclusão do Programa",
+            "description": "Informa o motivo pelo qual o programa foi incluído ou excluído no PPAG a partir das revisões anuais ou emendas parlamentares.",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "codigo_do_orgao_responsavel_pelo_programa",
+            "title": "Código do Órgão Responsável pelo Programa",
+            "description": "Indica o código utilizado pelo governo de Minas Gerais para cada orgão",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "orgao_responsavel_pelo_programa",
+            "title": "Órgão Responsável pelo Programa",
+            "description": "O órgão responsável pelo programa identifica o sistema operacional a que está vinculada a unidade orçamentária responsável pelo programa. O órgão pode se subdividir em várias unidades orçamentárias, que por sua vez, se subdividem em unidades administrativas, executoras e unidades de programação de gasto.",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "codigo_da_unidade_orcamentaria_responsavel_pelo_programa",
+            "title": "Código da Unidade Orçamentária Responsável pelo Programa",
+            "description": "Identifica qual o código da unidade orçamentária que é resonsável pela gestão do programa.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "unidade_orcamentaria_responsavel_pelo_programa",
+            "title": "Unidade Orçamentária Responsável pelo Programa",
+            "description": "Identifica o sistema operacional a que está vinculada a unidade orçamentária responsável pelo programa. O órgão pode se subdividir em várias unidades orçamentárias, que por sua vez, se subdividem em unidades administrativas, executoras e unidades de programação de gasto.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "objetivo",
+            "title": "Objetivo",
+            "description": "Expressa a busca do resultado que se quer alcançar, ou seja, a transformação da situaçãoproblema ou oportunidade, que serão objeto da intervenção do programa.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "justificativa",
+            "title": "Justificativa",
+            "description": "É a descrição do problema ou oportunidade que o programa tem por objetivo enfrentar ou\nviabilizar. ",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "tipo_de_programa",
+            "title": "Tipo de Programa",
+            "description": "Classificação do programa quanto aos seus beneficiários. Existem dois tipos de programa: FINALÍSTICOS: são os programas dos quais resultam bens ou serviços ofertados diretamente à sociedade. Geralmente os resultados são passíveis de mensuração; APOIO ÀS POLÍTICAS PÚBLICAS E ÁREAS ESPECÍFICAS: são os programas que contemplam ações voltadas à prestação de serviços ao próprio Estado para a gestão de políticas públicas e para o apoio administrativo.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "horizonte_temporal",
+            "title": "Horizonte Temporal",
+            "description": "Estabelece o período de vigência do programa, podendo ser contínuo ou temporário. Programa contínuo: é aquele composto por pelo menos uma ação de duração continuada, ou seja, ação que contemple um conjunto de operações que se realizam de modo permanente durante a vigência do programa. Programa temporário: é aquele composto na integralidade por projetos. Ou seja, todas as ações que compõem o programa compreendem um conjunto de operações limitadas no tempo, com data de início e de término bem definidas.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "estrategia_de_implementacao",
+            "title": "Estratégia de Implementação",
+            "description": "A estratégia de implementação define a forma como o programa se articulará para alcançar seu objetivo. Desse modo, indica como serão conduzidas as ações, quais os principais instrumentos disponíveis ou a serem constituídos, e a forma de execução (direta, descentralizada para Municípios, transferências e parcerias) para atingir os resultados pretendidos pelo programa",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "unidade_administrativa_responsavel_pelo_programa",
+            "title": "Unidade Administrativa Responsável pelo Programa",
+            "description": "É a unidade orçamentária responsável pelo gerenciamento do programa",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "previsao_orcamentaria_2022",
+            "title": "Previsão Orçamentária 2022",
+            "description": "São as despesas orçamentárias necessárias para a execução da ação no período referido. Representam as estimativas de custos para a realização do montante de produto definido como meta física para cada ano do plano. São a partir dos dados orçamentários da ação no plano plurianual que são detalhados os custos da ação na lei orçamentária anual em termos de categoria econômica, grupo de despesa, modalidade de aplicação, elemento de despesa, identificador de ação governamental, fonte de recursos e procedência. As estimativas devem contemplar recursos para cada ano de vigência do PPAG ou suas revisões",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "previsao_orcamentaria_2023",
+            "title": "Previsão Orçamentária 2023",
+            "description": "São as despesas orçamentárias necessárias para a execução da ação no período referido. Representam as estimativas de custos para a realização do montante de produto definido como meta física para cada ano do plano. São a partir dos dados orçamentários da ação no plano plurianual que são detalhados os custos da ação na lei orçamentária anual em termos de categoria econômica, grupo de despesa, modalidade de aplicação, elemento de despesa, identificador de ação governamental, fonte de recursos e procedência. As estimativas devem contemplar recursos para cada ano de vigência do PPAG ou suas revisões",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "previsao_orcamentaria_2024",
+            "title": "Previsão Orçamentária 2024",
+            "description": "São as despesas orçamentárias necessárias para a execução da ação no período referido. Representam as estimativas de custos para a realização do montante de produto definido como meta física para cada ano do plano. São a partir dos dados orçamentários da ação no plano plurianual que são detalhados os custos da ação na lei orçamentária anual em termos de categoria econômica, grupo de despesa, modalidade de aplicação, elemento de despesa, identificador de ação governamental, fonte de recursos e procedência. As estimativas devem contemplar recursos para cada ano de vigência do PPAG ou suas revisões",
+            "source": "SISOR"
+          },
+          {
+            "type": "integer",
+            "name": "previsao_orcamentaria_2025",
+            "title": "Previsão Orçamentária 2025",
+            "description": "São as despesas orçamentárias necessárias para a execução da ação no período referido. Representam as estimativas de custos para a realização do montante de produto definido como meta física para cada ano do plano. São a partir dos dados orçamentários da ação no plano plurianual que são detalhados os custos da ação na lei orçamentária anual em termos de categoria econômica, grupo de despesa, modalidade de aplicação, elemento de despesa, identificador de ação governamental, fonte de recursos e procedência. As estimativas devem contemplar recursos para cada ano de vigência do PPAG ou suas revisões",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "programa_transposto",
+            "title": "Programa Transposto",
+            "description": "?",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "causas",
+            "title": "Causas",
+            "description": "?As unidades responsáveis indicam as causas que, segundo a visão subjetiva dos atores responsáveis, condicionam a existência do problema.",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "titulo_do_objetivo_de_desenvolvimento_sustentavel",
+            "title": "Título do Objetivo de Desenvolvimento Sustentável",
+            "description": "?",
+            "source": "SISOR"
+          },
+          {
+            "type": "string",
+            "name": "subtitulo_do_objetivo_de_desenvolvimento_sustentavel",
+            "title": "Subtítulo do Objetivo de Desenvolvimento Sustentável",
+            "description": "?",
+            "source": "SISOR"
+          }
+        ]
+      }
+    }
+  ],
+  "profile": "data-package",
+  "title": "Indicadores do Plano Plurianual de Ação Governamental",
+  "description": "descrição",
+  "owner_org": "Superintedência Central de Planejamento e Orçamento - SCPO"
+}
